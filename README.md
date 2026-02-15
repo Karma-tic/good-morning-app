@@ -2,6 +2,7 @@
 
 A full-stack web application built to demonstrate frontend, backend, and database integration using modern tools.
 
+Application link: https://youtu.be/4qxe7JJxqhE?si=smMp_BgAHsplF8nO
 ---
 
 ## 🚀 Tech Stack
