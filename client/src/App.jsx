@@ -48,46 +48,56 @@ function App() {
   };
 
   return (
-  <div className="page">
-    <div className="card">
-      <h1>🌅 Good Morning</h1>
-      <p className="subtitle">
-        Start your day by sharing your details
-      </p>
+  <div className="layout">
+    <div className="left-section">
+      <div className="hero-text">
+        <h1>🌅 Good Morning</h1>
+        <p>
+          Welcome! Start your day with positivity and share your details
+          to begin something great.
+        </p>
+      </div>
+    </div>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+    <div className="right-section">
+      <div className="card">
+        <h2>Get Started</h2>
 
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Phone Number"
-          value={formData.phone}
-          onChange={handleChange}
-          required
-        />
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email Address"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
 
-        <button type="submit">Submit</button>
-      </form>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 );
+
 }
 
 export default App;

@@ -5,42 +5,67 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-.page {
+.layout {
+  display: flex;
   min-height: 100vh;
+}
+
+/* LEFT SIDE (Hero Section) */
+.left-section {
+  flex: 1;
   background: linear-gradient(135deg, #667eea, #764ba2);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 60px;
+  color: white;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* RIGHT SIDE (Form Section) */
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fc;
+  padding: 40px;
 }
 
 .card {
-  background: #ffffff;
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
+  background: white;
   padding: 30px;
   border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.6s ease-in-out;
 }
 
-.card h1 {
+.card h2 {
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 8px;
   color: #333;
-}
-
-.subtitle {
-  text-align: center;
-  color: #666;
-  margin-bottom: 25px;
-  font-size: 14px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 15px;
 }
 
 input {
@@ -56,7 +81,6 @@ input:focus {
 }
 
 button {
-  margin-top: 10px;
   padding: 12px;
   border-radius: 10px;
   border: none;
@@ -70,13 +94,13 @@ button {
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
@@ -84,9 +108,22 @@ button:hover {
   }
 }
 
-/* 📱 Mobile optimization */
-@media (max-width: 480px) {
-  .card {
-    padding: 24px 18px;
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .left-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .right-section {
+    padding: 20px;
   }
 }
