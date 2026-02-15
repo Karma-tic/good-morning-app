@@ -48,43 +48,46 @@ function App() {
   };
 
   return (
-    <div className="container">
+  <div className="page">
+    <div className="card">
       <h1>🌅 Good Morning</h1>
+      <p className="subtitle">
+        Start your day by sharing your details
+      </p>
 
-      <div className="form-box">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
 
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Enter your phone number"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+        />
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
 
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+        <button type="submit">Submit</button>
+      </form>
     </div>
-  );
+  </div>
+);
 }
 
 export default App;
