@@ -48,55 +48,47 @@ function App() {
   };
 
   return (
-  <div className="layout">
-    <div className="left-section">
-      <div className="hero-text">
-        <h1>🌅 Good Morning</h1>
-        <p>
-          Welcome! Start your day with positivity and share your details
-          to begin something great.
-        </p>
-      </div>
-    </div>
+  <div className="fullscreen">
+    <div className="content">
+      <h1>🌅 Good Morning</h1>
+      <p className="subtitle">
+        Welcome! Start your day with positivity and share your details to begin something great.
+      </p>
 
-    <div className="right-section">
-      <div className="card">
-        <h2>Get Started</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
 
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+        />
 
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   </div>
 );
+
 
 }
 
