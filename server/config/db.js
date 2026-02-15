@@ -3,7 +3,7 @@ const { Pool } = require("pg");
 const pool = new Pool({
   host: "localhost",
   user: "karmatic",
-  password: "", // add if you set one
+  password: "",
   database: "good_morning_db",
   port: 5432,
 });
